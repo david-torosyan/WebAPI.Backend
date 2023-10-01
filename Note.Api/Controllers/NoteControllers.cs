@@ -61,5 +61,17 @@ namespace Backend.Api.Controllers
             return NoContent();
         }
 
+        [HttpPut]
+        public ActionResult UpdateVilla(string title, [FromBody] Note Note)
+        {
+            if (title == null || title != Note.Title || ModelState.IsValid)
+            {
+                _noteService.Update(Note);
+                return NoContent();
+            }
+            return BadRequest();
+        }
+
+
     }
 }
