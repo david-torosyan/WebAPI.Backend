@@ -12,10 +12,15 @@ namespace Backend.Api.Controllers
         public NoteControllers(INoteService noteService) : base(noteService) { }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Note>> GetNotes()
+        public IActionResult GetNotes()
         {
             var Notes = _noteService.GetAllNotes();
-            return Ok(Notes);
+
+            if (Notes == null)
+            {
+                return Error("Note is null");
+            }
+            return Success(Notes, "Success");
         }
 
         [HttpGet("{title}", Name = "GetNote")]
