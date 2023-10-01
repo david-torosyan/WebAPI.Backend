@@ -1,5 +1,4 @@
 ﻿using API.BLL.Interfaces;
-using API.Domain;
 using Backend.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,12 +1,6 @@
 ﻿using API.BLL.Interfaces;
 using API.DAL.IRepository;
-using API.DAL.Repository;
 using API.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API.BLL.Services
 {

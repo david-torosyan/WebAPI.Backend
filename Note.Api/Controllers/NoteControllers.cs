@@ -1,7 +1,6 @@
 ﻿using API.BLL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using API.Domain;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Backend.Api.Controllers
 {
