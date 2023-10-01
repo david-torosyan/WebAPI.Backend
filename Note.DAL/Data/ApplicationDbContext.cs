@@ -9,5 +9,16 @@ namespace API.DAL.Data
         {
         }
         public DbSet<Note> Notes { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Note>()
+                    .HasIndex(s => s.Title)
+                    .IsUnique();
+        }
+
+
     }
 }
